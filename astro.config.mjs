@@ -6,4 +6,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  i18n: {
+    locales: ["zh-CN", "en"],
+    defaultLocale: "zh-CN",
+  },
 });
