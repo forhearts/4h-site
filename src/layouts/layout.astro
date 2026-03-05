@@ -1,5 +1,20 @@
 ---
 import "../assets/app.css";
-import Navbar from "../components/navbar.astro"
+import Navbar from "../components/navbar.astro";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
 ---
-<Navbar />
+
+<!doctype html>
+<html lang={lang}>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ForHearts</title>
+    </head>
+    <body>
+        <Navbar />
+        <slot />
+    </body>
+</html>

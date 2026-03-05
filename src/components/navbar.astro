@@ -1,11 +1,24 @@
 ---
 import "../assets/app.css";
 import FourHLogo from "../components/4h-logo.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  getLocalizedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
+
 <div class="navbar bg-base-100 shadow-sm">
   <div class="flex-1">
-    <a class="btn btn-ghost text-xl">
-      <FourHLogo/>
+    <a
+      href={getLocalizedPath(lang, "/")}
+      class="btn btn-ghost px-2 gap-2 text-xl font-black font-sans"
+    >
+      <FourHLogo />
+      <span>{t("nav.logo")}</span>
     </a>
   </div>
 </div>
