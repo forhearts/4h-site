@@ -8,7 +8,7 @@ import {
 } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const i18n = useTranslations(lang);
 ---
 
 <div class="navbar bg-base-100 shadow-sm">
@@ -18,7 +18,7 @@ const t = useTranslations(lang);
       class="btn btn-ghost px-2 gap-2 text-xl font-black font-sans"
     >
       <FourHLogo />
-      <span>{t("nav.logo")}</span>
+      <span>{i18n("nav.logo")}</span>
     </a>
   </div>
 </div>
