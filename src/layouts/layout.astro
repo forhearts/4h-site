@@ -14,46 +14,22 @@ const { page_setting } = Astro.props;
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{page_setting.title} | {i18n("nav.logo")}</title>
-        <link id="dynamic-favicon" rel="icon" type="image/svg+xml" href="" />
-
-        <script is:inline>
-            // SVG 原始结构，把 stroke 颜色抽离成变量
-            function getSvgUri(isDark) {
-                const color = isDark ? "#ffffff" : "#000000";
-
-                const svgContent = `
-        <svg viewBox="-1.05 -1.1677 1.8354 1.8354" xmlns="http://www.w3.org/2000/svg">
-          <path d="M -0.75 0 A 0.75 0.75 0 0 1 0.7356 -0.1463" fill="none" stroke="${color}" stroke-width="0.1" stroke-linecap="butt"></path>
-          <path d="M -0.9375 -0.087 A 1 0.25 0 0 0 0.75 0.1654" fill="none" stroke="${color}" stroke-width="0.1" stroke-linecap="butt"></path>
-        </svg>
-      `;
-
-                // 将 SVG 字符串进行 URL 编码，转为 Data URI 格式
-                return (
-                    "data:image/svg+xml," +
-                    encodeURIComponent(svgContent.trim())
-                );
-            }
-
-            const favicon = document.getElementById("dynamic-favicon");
-            const mediaQuery = window.matchMedia(
-                "(prefers-color-scheme: dark)",
-            );
-
-            // 更新 Favicon 的函数
-            function updateFavicon(e) {
-                favicon.href = getSvgUri(e.matches);
-            }
-
-            // 页面加载时立即执行一次
-            updateFavicon(mediaQuery);
-
-            // 监听系统主题变化，实时无缝替换
-            mediaQuery.addEventListener("change", updateFavicon);
-        </script>
+        <link
+            id="dynamic-favicon"
+            rel="icon"
+            type="image/svg+xml"
+            href="data:image/svg+xml,%3Csvg viewBox='-1.05 -1.1677 1.8354 1.8354' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M -0.75 0 A 0.75 0.75 0 0 1 0.7356 -0.1463' fill='none' stroke='%23000000' stroke-width='0.1' stroke-linecap='butt'/%3E%3Cpath d='M -0.9375 -0.087 A 1 0.25 0 0 0 0.75 0.1654' fill='none' stroke='%23000000' stroke-width='0.1' stroke-linecap='butt'/%3E%3C/svg%3E"
+            media="(prefers-color-scheme: light)"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="data:image/svg+xml,%3Csvg viewBox='-1.05 -1.1677 1.8354 1.8354' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M -0.75 0 A 0.75 0.75 0 0 1 0.7356 -0.1463' fill='none' stroke='%23ffffff' stroke-width='0.1' stroke-linecap='butt'/%3E%3Cpath d='M -0.9375 -0.087 A 1 0.25 0 0 0 0.75 0.1654' fill='none' stroke='%23ffffff' stroke-width='0.1' stroke-linecap='butt'/%3E%3C/svg%3E"
+            media="(prefers-color-scheme: dark)"
+        />
     </head>
+    <body>
+        <Navbar />
+        <slot />
+    </body>
 </html>
-<body>
-    <Navbar />
-    <slot />
-</body>

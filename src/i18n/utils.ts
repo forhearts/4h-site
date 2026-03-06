@@ -8,9 +8,15 @@ export const defaultLang = "zh-CN";
 export const ui = {
     "zh-CN": {
         "nav.logo": "环心",
+        "nav.project": "项目",
+        "nav.works": "作品",
+        "nav.about": "关于",
     },
     "en": {
         "nav.logo": "ForHearts",
+        "nav.project": "Project",
+        "nav.works": "Works",
+        "nav.about": "About",
     },
 } as const;
 
