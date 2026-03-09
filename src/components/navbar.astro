@@ -45,7 +45,7 @@ const i18n = useTranslations(lang);
       </ul>
     </div>
     <a
-      href={getLocalizedPath(lang, "/")}
+      href={getLocalizedPath(lang)}
       class="btn btn-ghost px-2 gap-2 text-xl font-black font-sans"
     >
       <FourHLogo />
@@ -56,7 +56,11 @@ const i18n = useTranslations(lang);
     <ul class="menu menu-horizontal px-1">
       <li>
         <details>
-          <summary>{i18n("nav.project")}</summary>
+          <summary>
+            <a href={getLocalizedPath(lang, "project")}>
+              {i18n("nav.project")}
+            </a>
+          </summary>
           <ul class="p-2 bg-base-100 w-40 z-1">
             <li><a>Submenu 1</a></li>
             <li><a>Submenu 2</a></li>
@@ -68,6 +72,8 @@ const i18n = useTranslations(lang);
     </ul>
   </div>
   <div class="navbar-end">
-    <a class="btn">Button</a>
+    <div class="hidden lg:flex">
+      <a class="btn">Button</a>
+    </div>
   </div>
 </div>

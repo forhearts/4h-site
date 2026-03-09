@@ -5,7 +5,7 @@
 
 export const defaultLang = "zh-CN";
 
-export const ui = {
+export const i18n = {
     "zh-CN": {
         "nav.logo": "环心",
         "nav.project": "项目",
@@ -22,17 +22,18 @@ export const ui = {
 
 export function getLangFromUrl(url: URL) {
     const [, lang] = url.pathname.split("/");
-    if (lang in ui) return lang as keyof typeof ui;
+    if (lang in i18n) return lang as keyof typeof i18n;
     return defaultLang;
 }
 
-export function useTranslations(lang: keyof typeof ui) {
-    return function t(key: keyof (typeof ui)[typeof defaultLang]) {
-        return ui[lang][key] || ui[defaultLang][key];
+export function useTranslations(lang: keyof typeof i18n) {
+    return function t(key: keyof (typeof i18n)[typeof defaultLang]) {
+        return i18n[lang][key] || i18n[defaultLang][key];
     };
 }
 
-export function getLocalizedPath(lang: keyof typeof ui, path: string = "/") {
+export function getLocalizedPath(lang: keyof typeof i18n, subdomain: string = "", path: string = "/") {
     const prefix = lang === defaultLang ? "" : `/${lang}`;
-    return `${prefix}${path.startsWith("/") ? path : "/" + path}`;
+    const subdomainPrefix = subdomain === "" ? "" : `${subdomain}.`;
+    return `${subdomainPrefix}${prefix}${path.startsWith("/") ? path : "/" + path}`;
 }
