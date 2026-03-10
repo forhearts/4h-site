@@ -1,18 +1,21 @@
 {
-  "name": "home-page",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@playform/compress": "^0.2.1",
-    "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.18.0",
-    "daisyui": "^5.5.18",
-    "tailwindcss": "^4.1.18"
-  }
+    "name": "4h-website",
+    "private": true,
+    "workspaces": [
+        "apps/*"
+    ],
+    "scripts": {
+        "start:app1": "npm run dev -w home-page",
+        "start:app2": "npm run dev -w project-page",
+        "start:proxy": "node --no-deprecation proxy.js",
+        "dev": "concurrently -c \"cyan,magenta,yellow\" -n \"主页,项目页,代理\" \"npm run start:app1\" \"npm run start:app2\" \"npm run start:proxy\""
+    },
+    "dependencies": {
+        "@playform/compress": "^0.2.1",
+        "express": "^5.2.1"
+    },
+    "devDependencies": {
+        "concurrently": "^9.2.1",
+        "http-proxy": "^1.18.1"
+    }
 }

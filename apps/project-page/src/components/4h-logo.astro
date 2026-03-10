@@ -1,0 +1,23 @@
+---
+const { class: className, ...props } = Astro.props;
+---
+
+<svg
+  viewBox="-1.05 -1.1677 1.8354 1.8354"
+  xmlns="http://www.w3.org/2000/svg"
+  class:list={["inline-block h-full w-auto", className]}
+  {...props}
+>
+  <path
+    d="M -0.75 0 A 0.75 0.75 0 0 1 0.7356 -0.1463"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="0.1"
+    stroke-linecap="butt"></path>
+  <path
+    d="M -0.9375 -0.087 A 1 0.25 0 0 0 0.75 0.1654"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="0.1"
+    stroke-linecap="butt"></path>
+</svg>
