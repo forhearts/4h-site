@@ -1,14 +1,11 @@
 {
     "name": "4h-website",
     "private": true,
-    "workspaces": [
-        "apps/*"
-    ],
     "scripts": {
-        "start:app1": "npm run dev -w home-page",
-        "start:app2": "npm run dev -w project-page",
+        "start:app1": "pnpm --filter home-page dev",
+        "start:app2": "pnpm --filter project-page dev",
         "start:proxy": "node --no-deprecation proxy.js",
-        "dev": "concurrently -c \"cyan,magenta,yellow\" -n \"主页,项目页,代理\" \"npm run start:app1\" \"npm run start:app2\" \"npm run start:proxy\""
+        "dev": "concurrently -c \"cyan,magenta,yellow\" -n \"主页,项目页,代理\" \"pnpm start:app1\" \"pnpm start:app2\" \"pnpm start:proxy\""
     },
     "dependencies": {
         "@playform/compress": "^0.2.1",
