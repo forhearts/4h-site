@@ -35,6 +35,8 @@ export function useTranslations(lang: keyof typeof i18n) {
 export function getLocalizedPath(lang: keyof typeof i18n, subdomain: string = "", path: string = "/") {
     const prefix = lang === defaultLang ? "" : `/${lang}`;
     const isPre = import.meta.env.PUBLIC_PRE_BUILD === "true";
-    const subdomainPrefix = subdomain === "" ? "" : `${isPre ? "pre-" : ""}${subdomain}.`;
+    const subdomainPrefix = subdomain === ""
+        ? (isPre ? "pre." : "")
+        : `${isPre ? "pre-" : ""}${subdomain}.`;
     return `https://${subdomainPrefix}4hworld.com${prefix}${path.startsWith("/") ? path : "/" + path}`;
 }
