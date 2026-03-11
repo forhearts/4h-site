@@ -1,4 +1,4 @@
-﻿export const languages = {
+export const languages = {
     "zh-CN": "简体中文",
     "en": "English",
 };
@@ -34,6 +34,7 @@ export function useTranslations(lang: keyof typeof i18n) {
 
 export function getLocalizedPath(lang: keyof typeof i18n, subdomain: string = "", path: string = "/") {
     const prefix = lang === defaultLang ? "" : `/${lang}`;
-    const subdomainPrefix = subdomain === "" ? "" : `${subdomain}.`;
-    return `${subdomainPrefix}${prefix}${path.startsWith("/") ? path : "/" + path}`;
+    const isPre = import.meta.env.PRE_BUILD === "true";
+    const subdomainPrefix = subdomain === "" ? "" : `${isPre ? "pre-" : ""}${subdomain}.`;
+    return `https://${subdomainPrefix}4hworld.com${prefix}${path.startsWith("/") ? path : "/" + path}`;
 }
