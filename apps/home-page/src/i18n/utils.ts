@@ -11,12 +11,14 @@ export const i18n = {
         "nav.project": "项目",
         "nav.works": "作品",
         "nav.about": "关于",
+        "nav.language-selctor": "选择语言",
     },
     "en": {
         "nav.logo": "ForHearts",
         "nav.project": "Project",
         "nav.works": "Works",
         "nav.about": "About",
+        "nav.language-selctor": "Change Language",
     },
 } as const;
 
