@@ -46,7 +46,7 @@ const subdomain = "";
       </ul>
     </div>
     <a
-      href={getLocalizedPath(lang, subdomain)}
+      href={getLocalizedPath(lang)}
       class="btn btn-ghost px-2 gap-2 text-xl font-black font-sans"
     >
       <FourHLogo />
@@ -105,24 +105,24 @@ const subdomain = "";
       </div>
       <ul
         tabindex="-1"
-        class="menu dropdown-content rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
+        class="menu dropdown-content rounded-box z-1 mt-4 p-2 shadow-sm"
       >
         <li>
           <a href={getLocalizedPath("zh-CN", subdomain)}
             ><span
-              class="pe-4 font-mono text-[.5625rem] font-bold tracking-[0.09375rem] opacity-40"
+              class="pe-4 font-mono text-[.5625rem] font-bold tracking-[0.09375rem] opacity-40 whitespace-nowrap"
               >ZH</span
             >
-            <span class="font-[sans-serif]">简体中文</span></a
+            <span class="font-[sans-serif] whitespace-nowrap">简体中文</span></a
           >
         </li>
         <li>
           <a href={getLocalizedPath("en", subdomain)}
             ><span
-              class="pe-4 font-mono text-[.5625rem] font-bold tracking-[0.09375rem] opacity-40"
+              class="pe-4 font-mono text-[.5625rem] font-bold tracking-[0.09375rem] opacity-40 whitespace-nowrap"
               >EN</span
             >
-            <span class="font-[sans-serif]">English</span></a
+            <span class="font-[sans-serif] whitespace-nowrap">English</span></a
           >
         </li>
       </ul>
