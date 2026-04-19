@@ -9,6 +9,7 @@ import {
 
 const lang = getLangFromUrl(Astro.url);
 const i18n = useTranslations(lang);
+const subdomain = "";
 ---
 
 <div class="navbar bg-base-100 shadow-sm">
@@ -45,7 +46,7 @@ const i18n = useTranslations(lang);
       </ul>
     </div>
     <a
-      href={getLocalizedPath(lang)}
+      href={getLocalizedPath(lang, subdomain)}
       class="btn btn-ghost px-2 gap-2 text-xl font-black font-sans"
     >
       <FourHLogo />
@@ -77,6 +78,7 @@ const i18n = useTranslations(lang);
     </div>
     <div class="dropdown dropdown-end">
       <div
+        tabindex="0"
         class="btn btn-sm btn-ghost gap-1 px-1.5 font-bold"
         title={i18n("nav.language-selctor")}
       >
@@ -101,7 +103,29 @@ const i18n = useTranslations(lang);
           ></path>
         </svg>
       </div>
-      <div></div>
+      <ul
+        tabindex="-1"
+        class="menu dropdown-content rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
+      >
+        <li>
+          <a href={getLocalizedPath("zh-CN", subdomain)}
+            ><span
+              class="pe-4 font-mono text-[.5625rem] font-bold tracking-[0.09375rem] opacity-40"
+              >ZH</span
+            >
+            <span class="font-[sans-serif]">简体中文</span></a
+          >
+        </li>
+        <li>
+          <a href={getLocalizedPath("en", subdomain)}
+            ><span
+              class="pe-4 font-mono text-[.5625rem] font-bold tracking-[0.09375rem] opacity-40"
+              >EN</span
+            >
+            <span class="font-[sans-serif]">English</span></a
+          >
+        </li>
+      </ul>
     </div>
   </div>
 </div>

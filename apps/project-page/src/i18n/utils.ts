@@ -11,12 +11,14 @@ export const i18n = {
         "nav.project": "项目",
         "nav.works": "作品",
         "nav.about": "关于",
+        "nav.language-selctor": "选择语言",
     },
     "en": {
         "nav.logo": "ForHearts",
         "nav.project": "Project",
         "nav.works": "Works",
         "nav.about": "About",
+        "nav.language-selctor": "Change Language",
     },
 } as const;
 
@@ -34,6 +36,16 @@ export function useTranslations(lang: keyof typeof i18n) {
 
 export function getLocalizedPath(lang: keyof typeof i18n, subdomain: string = "", path: string = "/") {
     const prefix = lang === defaultLang ? "" : `/${lang}`;
-    const subdomainPrefix = subdomain === "" ? "" : `${subdomain}.`;
-    return `${subdomainPrefix}${prefix}${path.startsWith("/") ? path : "/" + path}`;
+    const fullPath = `${prefix}${path.startsWith("/") ? path : "/" + path}`;
+
+    if (import.meta.env.DEV) {
+        const subdomainPrefix = subdomain === "" ? "" : `${subdomain}.`;
+        return `http://${subdomainPrefix}localhost${fullPath}`;
+    }
+
+    const isPre = import.meta.env.PUBLIC_PRE_BUILD === "true";
+    const subdomainPrefix = subdomain === ""
+        ? (isPre ? "pre." : "")
+        : `${isPre ? "pre-" : ""}${subdomain}.`;
+    return `https://${subdomainPrefix}4hworld.com${fullPath}`;
 }
