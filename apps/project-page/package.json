@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev --port 4322",
     "build": "astro build",
+    "pre-build": "PUBLIC_PRE_BUILD=true astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
