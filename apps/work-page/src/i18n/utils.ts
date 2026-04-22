@@ -1,4 +1,4 @@
-﻿export const languages = {
+export const languages = {
     "zh-CN": "简体中文",
     "en": "English",
 };
@@ -9,14 +9,14 @@ export const i18n = {
     "zh-CN": {
         "nav.logo": "环心",
         "nav.project": "项目",
-        "nav.work": "作品",
+        "nav.works": "作品",
         "nav.about": "关于",
         "nav.language-selctor": "选择语言",
     },
     "en": {
         "nav.logo": "ForHearts",
         "nav.project": "Project",
-        "nav.work": "work",
+        "nav.works": "Works",
         "nav.about": "About",
         "nav.language-selctor": "Change Language",
     },

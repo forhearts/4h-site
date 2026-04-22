@@ -9,7 +9,7 @@ import {
 
 const lang = getLangFromUrl(Astro.url);
 const i18n = useTranslations(lang);
-const subdomain = "project";
+const subdomain = "";
 ---
 
 <div class="navbar bg-base-100 shadow-sm">
@@ -50,8 +50,8 @@ const subdomain = "project";
         <li>
           <details>
             <summary>
-              <a href={getLocalizedPath(lang, "work")}>
-                {i18n("nav.work")}
+              <a href={getLocalizedPath(lang, "works")}>
+                {i18n("nav.works")}
               </a>
             </summary>
             <ul class="p-2 bg-base-100 w-40 z-1">
@@ -89,12 +89,12 @@ const subdomain = "project";
       <li>
         <details>
           <summary>
-            <a href={getLocalizedPath(lang, "work")}>
-              {i18n("nav.work")}
+            <a href={getLocalizedPath(lang, "works")}>
+              {i18n("nav.works")}
             </a>
           </summary>
           <ul class="p-2 bg-base-100 w-40 z-1">
-            <li><a>游戏</a></li>
+            <li><a>Submenu 1</a></li>
             <li><a>Submenu 2</a></li>
           </ul>
         </details>
