@@ -16,7 +16,7 @@ export const i18n = {
     "en": {
         "nav.logo": "ForHearts",
         "nav.project": "Project",
-        "nav.work": "work",
+        "nav.work": "Works",
         "nav.about": "About",
         "nav.language-selctor": "Change Language",
     },
