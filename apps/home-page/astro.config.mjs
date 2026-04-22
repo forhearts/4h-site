@@ -15,4 +15,8 @@ export default defineConfig({
   },
 
   integrations: [playformCompress()],
+
+  build: {
+    inlineStylesheets: 'auto'
+  },
 });
