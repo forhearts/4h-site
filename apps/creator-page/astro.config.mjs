@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
-
+import pagefind from "astro-pagefind";
 import playformCompress from "@playform/compress";
 
 export default defineConfig({
@@ -14,7 +14,7 @@ export default defineConfig({
     defaultLocale: "zh-CN",
   },
 
-  integrations: [playformCompress()],
+  integrations: [pagefind(), playformCompress()],
 
   build: {
     inlineStylesheets: 'auto'

@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@playform/compress": "^0.2.1",
+        "astro-pagefind": "^1.8.6",
         "express": "^5.2.1"
     },
     "devDependencies": {
