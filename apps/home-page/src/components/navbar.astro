@@ -1,6 +1,7 @@
 ---
 import "../assets/app.css";
 import FourHLogo from "../components/4h-logo.astro";
+import Search from "astro-pagefind/components/Search";
 import {
   getLangFromUrl,
   useTranslations,
@@ -103,9 +104,9 @@ const subdomain = "";
     </ul>
   </div>
   <div class="navbar-end">
-    <div class="hidden lg:flex">
-      <a class="btn">Button</a>
-    </div>
+
+
+<Search id="search" className="pagefind-ui" uiOptions={{ showImages: false }} />
     <div class="dropdown dropdown-end">
       <div
         tabindex="0"
