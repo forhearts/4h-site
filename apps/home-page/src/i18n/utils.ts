@@ -12,6 +12,7 @@ export const i18n = {
         "nav.work": "作品",
         "nav.about": "关于",
         "nav.language-selctor": "选择语言",
+        "nav.search": "搜索",
     },
     "en": {
         "nav.logo": "ForHearts",
@@ -19,6 +20,7 @@ export const i18n = {
         "nav.work": "Works",
         "nav.about": "About",
         "nav.language-selctor": "Change Language",
+        "nav.search": "Search",
     },
 } as const;
 

@@ -8,7 +8,7 @@ const proxy = httpProxy.createProxyServer({ ws: true });
 const routes = {
     'localhost': ' http://localhost:4321/',
     'project.localhost': ' http://localhost:4322/',
-    'work.localhost': ' http://localhost:4323/'
+    'creator.localhost': ' http://localhost:4323/'
 };
 
 const server = http.createServer((req, res) => {
@@ -34,5 +34,5 @@ server.listen(80, () => {
     console.log('🚀 代理服务器已启动!');
     console.log('访问 http://localhost -> 指向 4321 端口');
     console.log('访问 http://project.localhost -> 指向 4322 端口');
-    console.log('访问 http://work.localhost -> 指向 4323 端口');
+    console.log('访问 http://creator.localhost -> 指向 4323 端口');
 });
