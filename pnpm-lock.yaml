@@ -82,6 +82,24 @@ importers:
         specifier: ^4.1.18
         version: 4.2.1
 
+  apps/search-page:
+    dependencies:
+      '@playform/compress':
+        specifier: ^0.2.1
+        version: 0.2.1(@types/node@25.0.3)(jiti@2.6.1)(rollup@4.59.0)(typescript@5.9.3)
+      '@tailwindcss/vite':
+        specifier: ^4.1.18
+        version: 4.2.1(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(terser@5.44.1))
+      astro:
+        specifier: ^5.18.0
+        version: 5.18.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3)
+      daisyui:
+        specifier: ^5.5.18
+        version: 5.5.19
+      tailwindcss:
+        specifier: ^4.1.18
+        version: 4.2.1
+
 packages:
 
   '@astrojs/compiler@2.13.1':
