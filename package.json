@@ -5,8 +5,9 @@
         "start:app1": "pnpm --filter home-page dev",
         "start:app2": "pnpm --filter project-page dev",
         "start:app3": "pnpm --filter work-page dev",
+        "start:app4": "pnpm --filter server-page dev",
         "start:proxy": "node --no-deprecation proxy.js",
-        "dev": "concurrently -c \"cyan,magenta,yellow\" -n \"主页,项目页,作品页,代理\" \"pnpm start:app1\" \"pnpm start:app2\" \"pnpm start:app3\" \"pnpm start:proxy\""
+        "dev": "concurrently -c \"cyan,magenta,yellow\" -n \"主页,项目页,作品页,服务页,代理\" \"pnpm start:app1\" \"pnpm start:app2\" \"pnpm start:app3\" \"pnpm start:app4\" \"pnpm start:proxy\""
     },
     "dependencies": {
         "@playform/compress": "^0.2.1",
