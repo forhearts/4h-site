@@ -1,5 +1,2 @@
-/*
-  Content-Security-Policy: default-src 'self'
-
 /pagefind/*
   Access-Control-Allow-Origin: *
