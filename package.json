@@ -10,8 +10,6 @@
         "dev": "concurrently -c \"cyan,magenta,yellow\" -n \"主页,项目页,作品页,搜索页,代理\" \"pnpm start:app1\" \"pnpm start:app2\" \"pnpm start:app3\" \"pnpm start:app4\" \"pnpm start:proxy\""
     },
     "dependencies": {
-        "@playform/compress": "^0.2.1",
-        "astro-pagefind": "^1.8.6",
         "express": "^5.2.1"
     },
     "devDependencies": {
