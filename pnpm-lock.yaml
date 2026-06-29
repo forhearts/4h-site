@@ -27,9 +27,6 @@ importers:
 
   apps/creator-page:
     dependencies:
-      '@playform/compress':
-        specifier: ^0.2.1
-        version: 0.2.1(@types/node@25.0.3)(jiti@2.6.1)(rollup@4.59.0)(typescript@5.9.3)
       '@tailwindcss/vite':
         specifier: ^4.1.18
         version: 4.2.1(vite@8.0.16(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.6.1)(terser@5.44.1))
@@ -46,31 +43,25 @@ importers:
 
   apps/home-page:
     dependencies:
-      '@playform/compress':
-        specifier: ^0.2.1
-        version: 0.2.1(@types/node@25.0.3)(jiti@2.6.1)(rollup@4.59.0)(typescript@5.9.3)
-      '@tailwindcss/vite':
-        specifier: ^4.1.18
-        version: 4.2.1(vite@8.0.16(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.6.1)(terser@5.44.1))
       astro:
         specifier: ^7.0.2
         version: 7.0.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/node@25.0.3)(jiti@2.6.1)(rollup@4.59.0)(terser@5.44.1)
-      tailwindcss:
-        specifier: ^4.1.18
-        version: 4.2.1
     devDependencies:
+      '@tailwindcss/vite':
+        specifier: ^4.2.1
+        version: 4.2.1(vite@8.0.16(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.6.1)(terser@5.44.1))
       cross-env:
         specifier: ^10.1.0
         version: 10.1.0
       daisyui:
         specifier: ^5.6.3
         version: 5.6.3
+      tailwindcss:
+        specifier: ^4.2.1
+        version: 4.2.1
 
   apps/project-page:
     dependencies:
-      '@playform/compress':
-        specifier: ^0.2.1
-        version: 0.2.1(@types/node@25.0.3)(jiti@2.6.1)(rollup@4.59.0)(typescript@5.9.3)
       '@tailwindcss/vite':
         specifier: ^4.1.18
         version: 4.2.1(vite@8.0.16(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.6.1)(terser@5.44.1))
@@ -87,9 +78,6 @@ importers:
 
   apps/search-page:
     dependencies:
-      '@playform/compress':
-        specifier: ^0.2.1
-        version: 0.2.1(@types/node@25.0.3)(jiti@2.6.1)(rollup@4.59.0)(typescript@5.9.3)
       '@tailwindcss/vite':
         specifier: ^4.1.18
         version: 4.2.1(vite@8.0.16(@types/node@25.0.3)(esbuild@0.28.1)(jiti@2.6.1)(terser@5.44.1))

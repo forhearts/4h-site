@@ -14,7 +14,7 @@ export default defineConfig({
     defaultLocale: "zh-CN",
   },
 
-  integrations: [pagefind(), playformCompress()],
+  integrations: [pagefind()],
 
   build: {
     inlineStylesheets: 'auto'
