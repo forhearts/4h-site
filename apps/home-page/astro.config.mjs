@@ -2,7 +2,6 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 import pagefind from "astro-pagefind";
-import playformCompress from "@playform/compress";
 
 export default defineConfig({
   vite: {
