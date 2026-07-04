@@ -15,7 +15,7 @@
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "astro-pagefind": "^2.0.0",
+    "astro-pagefind": "^2.0.1",
     "daisyui": "^5.6.3"
   }
 }
