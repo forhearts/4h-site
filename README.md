@@ -1,4 +1,6 @@
 # Astro Starter Kit: Minimal
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fforhearts%2F4h-site.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fforhearts%2F4h-site?ref=badge_shield)
+
 
 ```sh
 npm create astro@latest -- --template minimal
@@ -41,3 +43,7 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fforhearts%2F4h-site.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fforhearts%2F4h-site?ref=badge_large)
